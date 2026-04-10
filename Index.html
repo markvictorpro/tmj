@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMJ Exercises / تمارين مفصل الفك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Roboto', 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        /* Language Switcher */
+        .header-top {
+            background-color: var(--primary-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Roboto', 'Cairo', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active, .lang-btn:hover {
+            background-color: #ffffff;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        /* Exercise Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin-top: 0;
+        }
+
+        .reference {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #ffffff;
+            background-color: #6c757d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Video Containers */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Language Toggle Classes */
+        .ar { display: none; }
+        .en { display: block; }
+
+        html[dir="rtl"] .ar { display: block; }
+        html[dir="rtl"] .en { display: none; }
+        
+        html[dir="rtl"] body {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">العربية</button>
+    </div>
+
+    <div class="container">
+        <h1 class="en">TMJ Exercises to Increase Mouth Opening</h1>
+        <h1 class="ar">تمارين مفصل الفك لزيادة فتحة الفم</h1>
+        
+        <p class="subtitle en">Evidence-based protocols to restore Maximum Interincisal Opening (MIO).</p>
+        <p class="subtitle ar">بروتوكولات مبنية على الأدلة العلمية لاستعادة الحد الأقصى لفتح الفم.</p>
+
+        <div class="card">
+            <h2 class="en">1. Passive Stretch Training (PST)</h2>
+            <h2 class="ar">١. تمرين التمدد السلبي (PST)</h2>
+            
+            <h3 class="en">The Technique:</h3>
+            <h3 class="ar">الطريقة:</h3>
+            <p class="en">Place your thumb on the upper front teeth and index/middle fingers on the lower front teeth. Apply a gentle, sustained downward force to stretch the jaw muscles beyond their active limit.</p>
+            <p class="ar">ضع إبهامك على الأسنان الأمامية العلوية والسبابة/الوسطى على الأسنان الأمامية السفلية. قم بتطبيق قوة ضغط لطيفة ومستمرة للأسفل لتمديد عضلات الفك لتتجاوز الحد النشط.</p>
+
+            <h3 class="en">The Evidence:</h3>
+            <h3 class="ar">الدليل العلمي:</h3>
+            <p class="en">Significantly increases mouth opening and decreases masseter hyperactivity.</p>
+            <p class="ar">يزيد بشكل ملحوظ من فتحة الفم ويقلل من فرط نشاط العضلة الماضغة.</p>
+            
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12966483/" target="_blank" class="reference en">Read Study (PMC12966483)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12966483/" target="_blank" class="reference ar">اقرأ الدراسة (PMC12966483)</a>
+        </div>
+
+        <div class="card">
+            <h2 class="en">2. Active Jaw-Opening to Pain Threshold</h2>
+            <h2 class="ar">٢. الفتح النشط للفك حتى حد الألم</h2>
+            
+            <h3 class="en">The Technique:</h3>
+            <h3 class="ar">الطريقة:</h3>
+            <p class="en">Perform active, unassisted maximal mouth opening up to the point of mild pain onset. Hold the position for 5 seconds, repeat multiple times daily.</p>
+            <p class="ar">قم بفتح الفم لأقصى حد ممكن بدون مساعدة حتى بداية الشعور بألم خفيف. ثبت الفك على هذا الوضع لمدة 5 ثوانٍ، وكرر ذلك عدة مرات يومياً.</p>
+
+            <h3 class="en">The Evidence:</h3>
+            <h3 class="ar">الدليل العلمي:</h3>
+            <p class="en">Yields significantly greater improvements in unassisted mouth opening compared to strictly pain-free exercises.</p>
+            <p class="ar">يحقق تحسناً أكبر بكثير في فتحة الفم مقارنة بالتمارين التي تتجنب الألم تماماً.</p>
+            
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9779752/" target="_blank" class="reference en">Read Study (PMC9779752)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9779752/" target="_blank" class="reference ar">اقرأ الدراسة (PMC9779752)</a>
+        </div>
+
+        <div class="card">
+            <h2 class="en">3. Mechanically Assisted Stretching</h2>
+            <h2 class="ar">٣. التمدد المدعوم ميكانيكياً</h2>
+            
+            <h3 class="en">The Technique:</h3>
+            <h3 class="ar">الطريقة:</h3>
+            <p class="en">Utilize stacked wooden tongue depressors placed bilaterally between posterior teeth (adding more blades over time) or dynamic jaw motion devices like TheraBite for low-torque, prolonged stretching.</p>
+            <p class="ar">استخدم خافضات اللسان الخشبية المتراكمة بوضعها على الجانبين بين الأسنان الخلفية (مع إضافة المزيد بمرور الوقت) أو أجهزة حركة الفك مثل TheraBite لتمديد طويل الأمد بقوة منخفضة.</p>
+
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8163667/" target="_blank" class="reference en">Read Study 1 (PMC8163667)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3584250/" target="_blank" class="reference en">Read Study 2 (PMC3584250)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8163667/" target="_blank" class="reference ar">اقرأ الدراسة ١ (PMC8163667)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3584250/" target="_blank" class="reference ar">اقرأ الدراسة ٢ (PMC3584250)</a>
+        </div>
+
+        <div class="card">
+            <h2 class="en">4. Lateral and Protrusive Excursions</h2>
+            <h2 class="ar">٤. الحركات الجانبية والأمامية للفك</h2>
+            
+            <h3 class="en">The Technique:</h3>
+            <h3 class="ar">الطريقة:</h3>
+            <p class="en">Actively move the mandible into maximum left and right lateral excursions, and maximum protrusion. Hold each position for 5 seconds to mobilize the joint capsule.</p>
+            <p class="ar">حرك الفك السفلي بنشاط إلى أقصى اليمين واليسار، وإلى الأمام (البروز) لأقصى حد. ثبت كل وضعية لمدة 5 ثوانٍ لتنشيط كبسولة المفصل.</p>
+
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11630894/" target="_blank" class="reference en">Read Study (PMC11630894)</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11630894/" target="_blank" class="reference ar">اقرأ الدراسة (PMC11630894)</a>
+        </div>
+
+        <div class="card">
+            <h2 class="en">Instructional Videos</h2>
+            <h2 class="ar">فيديوهات تعليمية</h2>
+            
+            <p class="en"><strong>Video 1:</strong> Trismus Exercises for a Tight Jaw or LockJaw</p>
+            <p class="ar"><strong>الفيديو الأول:</strong> تمارين لفك تيبس الفك</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Vn9fXni-iDE" allowfullscreen></iframe>
+            </div>
+
+            <p class="en"><strong>Video 2:</strong> Passive Stretches & Active Range-of-Motion</p>
+            <p class="ar"><strong>الفيديو الثاني:</strong> التمدد السلبي وتمارين المدى الحركي</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SbJZXG4fsd4" allowfullscreen></iframe>
+            </div>
+
+            <p class="en"><strong>Video 3:</strong> Active Stretching & Intra-oral Release</p>
+            <p class="ar"><strong>الفيديو الثالث:</strong> التمدد النشط وتحرير العضلات من داخل الفم</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/EM18snVgV_c" allowfullscreen></iframe>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            <p class="en"><em>Note: Consistent repetition and warm compresses prior to exercising are highly recommended to increase local blood flow.</em></p>
+            <p class="ar"><em>ملاحظة: يُنصح بشدة بالتكرار المستمر واستخدام الكمادات الدافئة قبل التمرين لزيادة تدفق الدم الموضعي.</em></p>
+        </div>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update button styles
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-ar').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
